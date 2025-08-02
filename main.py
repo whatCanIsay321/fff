@@ -9,6 +9,7 @@ async def root():
 
 @app.get("/hello/{name}")
 async def say_hello(name: str):
+    print("Received name:", name)
     return {"message": f"Hello {name}"}
 
 if __name__ == "__main__":
